@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>singolo2</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="singolo2.css">
+</head>
+<body>
+    <section class="portfolio">
+        <div class="wrapper">
+            <h2 class="portfolio__title">Portfolio</h2>
+            <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+            <div class="filter">
+                <span class="filter-item" >All</span>
+                <span class="filter-item">Web Design</span>
+                <span class="filter-item">Graphic Design</span>
+                <span class="filter-item">Artwork</span>
+            </div>
+            <div class="layout-4-column">
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_001.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_002.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_003.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_004.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_005.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_006.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_007.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_008.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_009.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_010.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_011.png" alt=""></div>
+                <div class="portfolio__image"><img src="assets/images/Portfolio-image_012.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="wrapper">
+            <h2 class="portfolio__title portfolio__title_about">About Us</h2>
+            <p class="portfolio__description portfolio__description_about" align="justify">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <div class="layout-3-column">
+                <div class="author">
+                    <img src="assets/images/photo1.jpg" alt="">
+                    <h3 class="author__title">Adam Jensen</h3>
+                    <p class="author__description" align="justify">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                    <div class="icons">
+                        <span class="icons-item"><img src="assets/images/icon-facebook.png" alt=""></span>
+                        <span class="icons-item"><img src="assets/images/icon-google+.png" alt=""></span>
+                        <span class="icons-item"><img src="assets/images/icon-twitter.png" alt=""></span>
+                        <span class="icons-item"><img src="assets/images/icon-linkedin.png" alt=""></span>
+                    </div>
+                    <img src="assets/images/photo2.jpg" alt="">
+                    <h3 class="author__title">Desmond Miles</h3>
+                    <p class="author__description" align="justify">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                    <div class="icons">
+                        <span class="icons-item"><img src="assets/images/icon-facebook.png" alt=""></span>
+                        <span class="icons-item"><img src="assets/images/icon-google+.png" alt=""></span>
+                        <span class="icons-item"><img src="assets/images/icon-twitter.png" alt=""></span>
+                        <span class="icons-item"><img src="assets/images/icon-linkedin.png" alt=""></span>
+                    </div>
+                    <img src="assets/images/photo3.jpg" alt="">
+                    <h3 class="author__title">Scolara Visari</h3>
+                    <p class="author__description" align="justify">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                    <div class="icons">
+                        <span class="icons-item"><img src="assets/images/icon-facebook.png" alt=""></span>
+                        <span class="icons-item"><img src="assets/images/icon-google+.png" alt=""></span>
+                        <span class="icons-item"><img src="assets/images/icon-twitter.png" alt=""></span>
+                        <span class="icons-item"><img src="assets/images/icon-linkedin.png" alt=""></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <script>
+        var portfolioItems = document.querySelectorAll('.portfolio__image');
+            for (var i = 0; i<=portfolioItems.length; i++){
+                if (i > 11 ){
+                    portfolioItems[i].setAttribute('hidden', true);
+                    console.log('ggf');
+                }
+            }
+    </script>
+</body>
+</html>
