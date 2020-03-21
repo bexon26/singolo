@@ -14,31 +14,43 @@
                 <h1 class="logo">SINGOLO<span>*</span> </h1>
                 <nav class="header__navigation">
                     <ul class="navigation">
-                        <li><a href="">HOME</a></li>
+                        <li><a href="#home" class="navigation__link">HOME</a></li>
                         <li><span>·</span></li>
-                        <li><a href="">SERVICES</a></li>
+                        <li><a href="#services" class="navigation__link">SERVICES</a></li>
                         <li><span>·</span></li>
-                        <li><a href="">PORTFOLIO</a></li>
+                        <li><a href="#portfolio" class="navigation__link">PORTFOLIO</a></li>
                         <li><span>·</span></li>
-                        <li><a href="">ABOUT</a></li>
+                        <li><a href="#about" class="navigation__link">ABOUT</a></li>
                         <li><span>·</span></li>
-                        <li><a href="">CONTACT</a></li>
+                        <li><a href="#contact" class="navigation__link">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <div class="Slider">
+    <div id="home" class="Slider">
         <div class="wrapper">
             <div class="Slider-block">
-                <div class="arrow"></div>
+                <div class="Slider-item" >  
+                <!-- <div class="aroww" ></div> -->
+                <div class=""></div>
                 <div class="phone-vertical"><img src="assets/images/iPhone Vertical.png" alt="phone-vertical"></div>
-                <div class="phone-horizontal"><img src="assets/images/iPhone Horizontal.png" alt="phone-horizontal"></div>
-                <div class="arrow arrow_rigth"></div>
+                <div class="phone-horizontal"><img src="assets/images/iPhone Horizontal.png" alt="phone-horizontal" ></div>
+                <!-- <div class="arrow arrow_rigth"></div> -->
+                <div class=""></div>
             </div>
+            <div class="Slider-item-2">
+                <div class="slide-block">
+                    <img src="./assets/images/slide2.png" alt="slide1">
+                </div>
+            </div>
+            <div class="arrow arrow_active"></div>
+            <div class="arrow arrow_active arrow_rigth"></div>
+            </div>
+            
         </div>
     </div>
-    <section class="Services">
+    <section id="services" class="Services">
         <div class="wrapper">
             <div class="Services-block">
                 <h2 class="Services-block__title">Our Services</h2>
@@ -97,7 +109,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="wrapper wrapper2">
             <h2 class="portfolio__title">Portfolio</h2>
             <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -123,7 +135,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section id="about" class="about">
         <div class="wrapper wrapper2">
             <h2 class="portfolio__title portfolio__title_about">About Us</h2>
             <p class="portfolio__description portfolio__description_about" align="justify">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -161,7 +173,7 @@
         </div>
         
     </section>
-    <section class="qoute">
+    <section id="contact" class="qoute">
         <div class="wrapper wrapper2">
             <h2 class="qoute__title">Get a Quote</h2>
             <p class="qoute__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -203,11 +215,12 @@
     <script>
         var portfolioItems = document.querySelectorAll('.portfolio__image');
             for (var i = 0; i<=portfolioItems.length; i++){
-                if (i > 11 ){
+                if (i > 11&& portfolioItems.length>12 ){
                     portfolioItems[i].setAttribute('hidden', true);
                     console.log('ggf');
                 }
             }
     </script>
+    <script src="./script.js"></script>
 </body>
 </html>
