@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,15 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="singolo.css">
 </head>
+
 <body>
     <header class="header">
         <div class="wrapper">
             <div class="header-block">
+
                 <h1 class="logo">SINGOLO<span>*</span> </h1>
                 <nav class="header__navigation">
-                    <ul class="navigation">
+                    <ul class="navigation menu__box">
                         <li><a href="#home" class="navigation__link">HOME</a></li>
                         <li><span>·</span></li>
                         <li><a href="#services" class="navigation__link">SERVICES</a></li>
@@ -25,90 +28,128 @@
                         <li><a href="#contact" class="navigation__link">CONTACT</a></li>
                     </ul>
                 </nav>
+
+
+
+
+
             </div>
         </div>
     </header>
     <div id="home" class="slider">
-        
-            <div class="slider-block">
-                <img src="./assets/images/slide1.png" alt="slide1" class="slider-block__img">
-                <img src="./assets/images/slide2.png" alt="slide2" class="slider-block__img">
-                
-                
-               <!-- <div class="Slider-item" >  
+        <div class="slider-block">
+            <img src="./assets/images/slide1.png" alt="slide1" class="slider-block__img">
+            <img src="./assets/images/slide2.png" alt="slide2" class="slider-block__img">
+
+            <!-- <div class="Slider-item" >  
                  <div class="aroww" ></div> 
                 
                 <div class="phone-vertical"><img src="assets/images/iPhone Vertical.png" alt="phone-vertical"></div>
                 <div class="phone-horizontal"><img src="assets/images/iPhone Horizontal.png" alt="phone-horizontal" ></div>
                 <div class="arrow arrow_rigth"></div> -->
-                
-            </div>
             <!-- <div class="Slider-item-2">
                 <div class="slide-block">
                     <img src="./assets/images/slide2.png" alt="slide1">
                 </div>
             </div> -->
-            <div class="arrow arrow_active arrow_left"></div>
-            <div class="arrow arrow_active arrow_right"></div>
-            </div>
+        </div>
+
+        <div class="arrow arrow_active arrow_left"></div>
+        <div class="phone-vertical">
+            <div class="vertical-dispaly-block"></div>
+        </div>
+        <div class="phone-horizontal">
+            <div class="horizontal-dispaly-block"></div>
+        </div>
+        <div class="arrow arrow_active arrow_right"></div>
+
+    </div>
+    <nav class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
             
+        </label>
         
+        <ul class="navigation menu__box">
+            <h1 class="logo logo_humburger">SINGOLO<span>*</span> </h1>
+            <li><a href="#home" class="navigation__link menu__item">HOME</a></li>
+            <li><a href="#services" class="navigation__link menu__item">SERVICES</a></li>
+            <li><a href="#portfolio" class="navigation__link menu__item">PORTFOLIO</a></li>
+            <li><a href="#about" class="navigation__link menu__item">ABOUT</a></li>
+            <li><a href="#contact" class="navigation__link menu__item">CONTACT</a></li>
+        </ul>
+    </nav>
+
+
     </div>
     <section id="services" class="Services">
-        <div class="wrapper">
+        <div class="wrapper wrapper_services">
+
+            
             <div class="Services-block">
                 <h2 class="Services-block__title">Our Services</h2>
-                <p class="Services-block__description" align="justify">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <p class="Services-block__description" align="justify">Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
+                    sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="layout-3-column">
                     <div class="service">
                         <div class="service__icon"><img src="assets/images/pen.png" alt="pen"></div>
                         <div class="service-text-block">
                             <h3 class="service-text-block__title">Custom Design</h3>
-                            <p class="service-text-block__description" align="justify">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                            <p class="service-text-block__description" align="justify">Curabitur vestibulum eget mauris
+                                quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                         </div>
-                        
+
                     </div>
                     <div class="service">
                         <div class="service__icon"><img src="assets/images/phone.png" alt="phone"></div>
                         <div class="service-text-block">
                             <h3 class="service-text-block__title">Responsive Layout</h3>
-                            <p class="service-text-block__description" align="justify">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae&shy;sent&shy; elit leo.</p>
+                            <p class="service-text-block__description" align="justify">Sed porttitor placerat rhoncus.
+                                In at nunc tellus. Maecenas blandit nunc ligula. Prae&shy;sent&shy; elit leo.</p>
                         </div>
-                        
+
                     </div>
                     <div class="service">
                         <div class="service__icon"><img src="assets/images/bulb.png" alt="bulb"></div>
                         <div class="service-text-block">
                             <h3 class="service-text-block__title">Inovative Ideas</h3>
-                            <p class="service-text-block__description" align="justify">Quisque luctus, quam eget molestie com&shy;modo&shy;, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                            <p class="service-text-block__description" align="justify">Quisque luctus, quam eget
+                                molestie com&shy;modo&shy;, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+                            </p>
                         </div>
-                        
+
                     </div>
                     <div class="service">
                         <div class="service__icon"><img src="assets/images/bubble.png" alt="bubble"></div>
                         <div class="service-text-block">
                             <h3 class="service-text-block__title">24 / 7 Support</h3>
-                            <p class="service-text-block__description" align="justify">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen&shy;tesque&shy; egestas venenatis lorem .</p>
+                            <p class="service-text-block__description" align="justify">Vivamus vel quam lacinia,
+                                tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen&shy;tesque&shy; egestas
+                                venenatis lorem .</p>
                         </div>
-                        
+
                     </div>
                     <div class="service">
                         <div class="service__icon"><img src="assets/images/heart.png" alt="heart"></div>
                         <div class="service-text-block">
                             <h3 class="service-text-block__title">Love Is The Answer</h3>
-                            <p class="service-text-block__description" align="justify">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                            <p class="service-text-block__description" align="justify">Nulla sed nunc et tortor luctus
+                                faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                         </div>
-                        
+
                     </div>
                     <div class="service">
                         <div class="service__icon"><img src="assets/images/star.png" alt="star"></div>
                         <div class="service-text-block">
                             <h3 class="service-text-block__title">Feel Like A Star</h3>
-                            <p class="service-text-block__description" align="justify">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+                            <p class="service-text-block__description" align="justify">Quisque hendrerit purus dapibus,
+                                ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -116,38 +157,55 @@
     <section id="portfolio" class="portfolio">
         <div class="wrapper wrapper2">
             <h2 class="portfolio__title">Portfolio</h2>
-            <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+            <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                lacinia odio sem nec elit.</p>
             <div class="filter">
-                <span class="filter-item" >All</span>
+                <span class="filter-item">All</span>
                 <span class="filter-item">Web Design</span>
                 <span class="filter-item">Graphic Design</span>
                 <span class="filter-item">Artwork</span>
             </div>
             <div class="layout-4-column">
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_001.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_002.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_003.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_004.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_005.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_006.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_007.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_008.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_009.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_010.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_011.png" alt=""></div>
-                <div class="portfolio__image"><img src="assets/images/Portfolio-image_012.png" alt=""></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_002.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_003.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_001.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_004.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_005.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_006.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_007.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_008.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_009.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_010.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_011.png" alt=""
+                        class="portfolio-item__image"></div>
+                <div class="portfolio-item"><img src="assets/images/Portfolio-image_012.png" alt=""
+                        class="portfolio-item__image"></div>
             </div>
         </div>
     </section>
     <section id="about" class="about">
         <div class="wrapper wrapper2">
             <h2 class="portfolio__title portfolio__title_about">About Us</h2>
-            <p class="portfolio__description portfolio__description_about" align="justify">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p class="portfolio__description portfolio__description_about" align="justify">Fusce dapibus, tellus ac
+                cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula,
+                eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+            </p>
             <div class="layout-3-column layout-3-column_about">
                 <div class="author">
                     <img src="assets/images/photo1.jpg" alt="">
                     <h3 class="author__title">Adam Jensen</h3>
-                    <p class="author__description" align="justify">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                    <p class="author__description" align="justify">Quisque luctus, quam eget molestie commodo, lacus
+                        purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                     <div class="icons">
                         <span class="icons-item"><img src="assets/images/icon-facebook.png" alt=""></span>
                         <span class="icons-item"><img src="assets/images/icon-google+.png" alt=""></span>
@@ -156,7 +214,8 @@
                     </div>
                     <img src="assets/images/photo2.jpg" alt="">
                     <h3 class="author__title">Desmond Miles</h3>
-                    <p class="author__description" align="justify">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                    <p class="author__description" align="justify">Curabitur vestibulum eget mauris quis laoreet.
+                        Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                     <div class="icons">
                         <span class="icons-item"><img src="assets/images/icon-facebook.png" alt=""></span>
                         <span class="icons-item"><img src="assets/images/icon-google+.png" alt=""></span>
@@ -165,7 +224,8 @@
                     </div>
                     <img src="assets/images/photo3.jpg" alt="">
                     <h3 class="author__title">Scolara Visari</h3>
-                    <p class="author__description" align="justify">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                    <p class="author__description" align="justify">Nulla sed nunc et tortor luctus faucibus. Morbi at
+                        aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     <div class="icons">
                         <span class="icons-item"><img src="assets/images/icon-facebook.png" alt=""></span>
                         <span class="icons-item"><img src="assets/images/icon-google+.png" alt=""></span>
@@ -175,27 +235,34 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
     <section id="contact" class="qoute">
         <div class="wrapper wrapper2">
             <h2 class="qoute__title">Get a Quote</h2>
-            <p class="qoute__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p class="qoute__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+                mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus,
+                tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="contact-section">
                 <form id="qoute" action="./Succes.html" class="contact-form" method="POST">
-                    <input class='contact-section__input' type="text" required placeholder="Name (Required)" form="qoute">
-                    <input class='contact-section__input' type="email" required placeholder="Email (Required)" form="qoute">
+                    <input class='contact-section__input' type="text" required placeholder="Name (Required)"
+                        form="qoute">
+                    <input class='contact-section__input' type="email" required placeholder="Email (Required)"
+                        form="qoute">
                     <input class='contact-section__input' type="text" placeholder="Subject" form="qoute">
-                    <input class='contact-section__input contact-section__input_big' type="text" placeholder="Describe your project in detail...">
-                    <input class="submit-button" type="submit" form="qoute" value="Send">
+                    <input class='contact-section__input contact-section__input_big' type="text"
+                        placeholder="Describe your project in detail...">
+                    <input class="submit-button" type="submit" form="qoute" value="SEND">
                 </form>
                 <div class="contact-information">
                     <h3 class="contact-information__title">Contact Information</h3>
-                    <p  class="contact-information__description" align="justify">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra&shy; nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
+                    <p class="contact-information__description" align="justify">Quisque hendrerit purus dapibus, ornare
+                        nibh vitae, viver&shy;ra&shy; nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero.
+                        Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
                     <div class="contact-block">
                         <a class="contact-block__location" href="#">Elm St. 14/05 Lost City </a>
                         <a class="contact-block__phone" href="tel:035283318635">03528 331 86 35 </a>
-                        <a class="contact-block__email" href="mailto:info@singolo.com">info@singolo.com</a>                    
+                        <a class="contact-block__email" href="mailto:info@singolo.com">info@singolo.com</a>
                     </div>
                 </div>
             </div>
@@ -207,7 +274,7 @@
                 <div class="copyright">
                     <p class="copyright__item">© Copyright 2013</p>
                 </div>
-                <div class="icons">
+                <div class="icons icons_footer">
                     <span class="icons-item icons-item_rigth"><img src="assets/images/icon-facebook.png" alt=""></span>
                     <span class="icons-item icons-item_rigth"><img src="assets/images/icon-google+.png" alt=""></span>
                     <span class="icons-item icons-item_rigth"><img src="assets/images/icon-twitter.png" alt=""></span>
@@ -218,13 +285,14 @@
     </footer>
     <script>
         var portfolioItems = document.querySelectorAll('.portfolio__image');
-            for (var i = 0; i<=portfolioItems.length; i++){
-                if (i > 11&& portfolioItems.length>12 ){
-                    portfolioItems[i].setAttribute('hidden', true);
-                    console.log('ggf');
-                }
+        for (var i = 0; i <= portfolioItems.length; i++) {
+            if (i > 7 && portfolioItems.length > 8) {
+                portfolioItems[i].setAttribute('hidden', true);
+                
             }
+        }
     </script>
     <script src="./script.js"></script>
 </body>
+
 </html>
