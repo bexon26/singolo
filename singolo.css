@@ -1,36 +1,55 @@
-body {
-    width: 1020px;
+.page-main {
+    max-width: 1020px;
+    min-width: 160px;
     margin: 0 auto;
     padding: 0;
     font-family: 'Lato', serif;
 }
+ body {
+    scroll-behavior: smooth;
+}
+
 .hamburger-menu {
     display: none;
 }
+
 .wrapper {
-    width: 946px;
     margin: 0 auto;
     position: relative;
+    /* max-width: 946px; */
 }
 
-.wrapper2 {
-    width: 940px;
+.wrapper1 {
+    width: 1020px;
+}
+
+.wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0px 37px; */
+    align-items: center;
+    min-height: 89px;
+    /* position: fixed;
+    z-index: 1; */
+
+    background-color: #2d303a;
+    box-shadow: 0px 6px 0px #323746;
+    position: fixed;
+    z-index: 100;
+    top: 0;
 }
 
 .header {
+    display: block;
     padding-top: 29px;
-    padding-bottom: 16px;
-    background-color: #2d303a;
-    box-shadow: 0px 8px 0px #323746;
-}
-
-.header-block {
-    display: flex;
-    justify-content: space-between;
+    padding-bottom: 15px;
+    
+    
 }
 
 .logo {
     margin: 0;
+    padding-left: 37px;
     font-family: 'Lato';
     font-weight: 700;
     font-size: 25px;
@@ -43,10 +62,12 @@ body {
 .logo>span {
     color: #dc655f;
 }
-
+.header__navigation {
+    padding-right: 38px;
+}
 .navigation {
     padding-right: 3px;
-    margin-top: 9px;
+    margin-top: 21px;
     display: flex;
     list-style-type: none;
 }
@@ -76,15 +97,15 @@ body {
 
 .slider {
     margin: 0 auto;
-    margin-top: 6px;
-    width: 1020px;
+    margin-top: 51px;
+
     position: relative;
     /* background-color: #f06c64;
     box-shadow: 0 7px 0 #ea676b; */
 }
 
 .slider-block {
-    width: 1020px;
+    /* width: 1020px;*/
     height: 600px;
     margin: 0 auto;
     position: relative;
@@ -92,8 +113,8 @@ body {
 }
 
 .slider-block__img {
-    width: 1020px;
-    height: 600px;
+    width: 100%;
+    /* height: 600px; */
     position: absolute;
     transition: all ease 1s;
     top: 0;
@@ -124,7 +145,7 @@ body {
 }
 
 .arrow_left {
-    left: 40px;
+    left: 4%;
 }
 
 .phone-vertical {
@@ -135,6 +156,7 @@ body {
     top: 54px;
     left: 113px;
     opacity: 0;
+    /* transition: all .3s ease-out; */
 }
 
 .phone-horizontal {
@@ -144,6 +166,7 @@ body {
     height: 240px;
     position: absolute;
     opacity: 0;
+    /* transition: all .3s ease-out; */
 }
 
 .vertical-dispaly-block {
@@ -162,9 +185,13 @@ body {
 
 .Services {
     background-color: #f2f2f2;
-    /* margin-top: 6px; */
+    /* margin-top: 58.1%; */
     padding-bottom: 33px;
     box-shadow: 0 7px 0 #ffffff;
+}
+
+.wrapper_services {
+    width: 92.745%;
 }
 
 .Services-block {
@@ -197,18 +224,18 @@ body {
 }
 
 .layout-3-column_about {
-    column-gap: 20px;
+    column-gap: 2%;
 }
 
 .service {
     display: flex;
-    justify-content: space-between;
     padding-bottom: 18px;
 }
 
 .service__icon {
     margin-top: 4px;
     padding-left: 1px;
+    padding-right: 20px;
 }
 
 .service__icon>img {
@@ -247,6 +274,7 @@ h2 {
 
 .portfolio {
     background-color: #2d303a;
+    padding: 0 40px;
     padding-bottom: 56px;
     box-shadow: 0 7px 0 #323746;
 }
@@ -305,6 +333,7 @@ h2 {
     margin-top: 7px;
     background-color: #f2f2f2;
     box-shadow: 0 7px 0 #ffffff;
+    padding: 0 40px;
     padding-bottom: 65px;
 }
 
@@ -335,7 +364,7 @@ h2 {
 .author__description {
     margin-top: 8px;
     font-size: 12px;
-    width: 301px;
+    width: 100%;
     letter-spacing: -0.07px;
     line-height: 21px;
     color: #767e9e;
@@ -362,7 +391,8 @@ h2 {
 .qoute {
     background-color: #f06c64;
     margin-top: 5px;
-    padding-bottom: 22px;
+    padding: 0 40px;
+    padding-bottom: 7px;
     box-shadow: 0 7px 0 #ea676b;
 }
 
@@ -394,7 +424,7 @@ h2 {
 }
 
 .contact-section__input {
-    width: 604px;
+    width: 94.1%;
     background-color: #d6564f;
     color: #f48c8f;
     font-size: 12px;
@@ -416,7 +446,7 @@ h2 {
 }
 
 .contact-information {
-    width: 328px;
+    width: 35%;
     color: #f0d8d9;
 }
 
@@ -489,6 +519,7 @@ h2 {
 
 .footer {
     background-color: #2d303a;
+    padding: 0 40px;
     padding-bottom: 20px;
 }
 
@@ -510,20 +541,14 @@ h2 {
     letter-spacing: -0.2px;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        width: 768px;
+@media screen and (max-width: 1019px) {
+    .wrapper1 {
+        width: 100%;
     }
-    .header {
-        padding-bottom: 19px;
+    .arrow_right {
+        right: 27px;
     }
-    .logo {
-        margin-left: -4px;
-    }
-    .navigation {
-        margin-top: 7px;
-    }
-    .slider {
+    /* .slider {
         margin: 0 auto;
         margin-top: 6px;
         width: 768px;
@@ -578,123 +603,8 @@ h2 {
     .arrow_left {
         left: 30px;
     }
-    .arrow_right {
-        right: 30px;
-    }
-    .Services-block {
-        padding-top: 39px;
-        padding-left: 0px;
-    }
-    .service {
-        padding-bottom: 39px;
-    }
-    .Services {
-        padding-bottom: 20px;
-    }
-    .portfolio__title {
-        margin-bottom: 19px;
-    }
-    .portfolio__description {
-        letter-spacing: 0;
-        margin-bottom: 10px;
-        width: 652px;
-        line-height: 30px;
-    }
-    .layout-4-column {
-        padding-top: 23px;
-        columns: 3;
-        column-gap: 20px;
-    }
-    .portfolio-item__image {
-        width: 215px;
-    }
-    .portfolio-item {
-        height: 183px;
-    }
-    .portfolio__title_about {
-        padding-top: 55px;
-        margin-bottom: 0px;
-    }
-    .layout-3-column_about {
-        columns: 3;
-        padding-top: 23px;
-    }
-    .author>img {
-        width: 219px;
-    }
-    .portfolio__description_about {
-        margin-top: 15px;
-    }
-    .author__title {
-        margin-top: 8px;
-    }
-    .author__description {
-        margin-top: 0px;
-        width: 219px;
-    }
-    .icons {
-        padding-top: 0px;
-    }
-    .about {
-        padding-bottom: 68px;
-    }
-    .qoute__title {
-        padding-top: 53px;
-    }
-    .contact-section__input {
-        width: 431px;
-        margin-bottom: 12px;
-        padding: 0px 0 0 8px;
-    }
-    .contact-section {
-        padding-top: 25px;
-    }
-    .contact-section__input_big {
-        padding-bottom: 124px;
-    }
-    .contact-information__title {
-        margin-bottom: 0px;
-    }
-    .contact-block {
-        margin-top: 12px;
-    }
-    .submit-button {
-        margin-top: 5px;
-        margin-left: 0;
-        padding: 12px 49px;
-        background-color: #FBC65F;
-        ;
-        color: #886A30;
-        font-size: 14px;
-    }
-    .qoute {
-        padding-bottom: 37px
-    }
-    .copyright {
-        padding-top: 9px;
-        padding-left: 0px;
-    }
-    .copyright__item {
-        letter-spacing: 0.5px;
-    }
-    .icons_footer {
-        padding-top: 12px;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    body {
-        width: 375px;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-    .wrapper {
-        width: 315px;
-    }
-
-    .phone-vertical {
+     */
+    /* .phone-vertical {
         width: 89px;
         height: 178px;
         top: 20px;
@@ -733,19 +643,149 @@ h2 {
     .slider-block__img {
         width: 375px;
         height: 221px;
-    }
-    .portfolio__description {
-        width: 375px;
+    } */
+
+    .navigation {
+        margin-top: 22px;
     }
 
-    
-    .contact-section__input {
-        width: 212px;
+
+    .layout-3-column {
+        columns: 2;
+        padding-top: 17px;
+        padding-right: 4%;
+        column-gap: 7%;
+    }
+    .service-text-block {
+        width: 100%;
+    }
+    .Services-block {
+        padding-top: 39px;
+        padding-left: 0px;
+    }
+    .service {
+        padding-bottom: 39px;
+    }
+    .Services {
+        padding: 0px 13px;
+        padding-bottom: 19px;
     }
     .layout-4-column {
-        columns: 2
+        padding-top: 23px;
+        columns: 3;
+        column-gap: 20px;
     }
+    .layout-3-column_about {
+        columns: 3;
+        padding-right: 0;
+        padding-top: 21px;
+        column-gap: 16px;
+    }
+    .portfolio {
+        padding-bottom: 52px;
+    }
+
+    .portfolio-item {
+        height: 100%;
+    }
+    .portfolio-item__image {
+        width: calc((100vw - 127px)/3);
+        height: 100%;
+    }
+    .portfolio__title {
+        margin-bottom: 19px;
+    }
+    .portfolio__description {
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        width: 96%;
+        line-height: 30px;
+    }
+    .layout-4-column {
+        padding-top: 23px;
+        columns: 3;
+        column-gap: 20px;
+    }
+    .portfolio__title_about {
+        padding-top: 53px;
+        margin-bottom: 0px;
+    }
+    .author>img {
+        width: 100%;
+    }
+    .author__title {
+        margin-top: 8px;
+    }
+    .author__description {
+        margin-top: 0px;
+    }
+    .icons {
+        padding-top: 0px;
+    }
+    .about {
+        padding-bottom: 68px;
+    }
+    .contact-section__input {
+        width: 92.1%;
+    }
+    .contact-information {
+        width: 47%;
+    }
+    .qoute__title {
+        padding-top: 53px;
+    }
+    .contact-section__input {
+        margin-bottom: 12px;
+        padding: 0px 0 0 8px;
+    }
+    .contact-section {
+        padding-top: 25px;
+    }
+    .contact-section__input_big {
+        padding-bottom: 124px;
+    }
+    .contact-information__title {
+        margin-bottom: 0px;
+    }
+    .contact-block {
+        margin-top: 12px;
+    }
+    .submit-button {
+        margin-top: 4px;
+        margin-left: 0;
+        padding: 12px 49px;
+        background-color: #FBC65F;
+        ;
+        color: #886A30;
+        font-size: 14px;
+    }
+    .qoute {
+        padding-bottom: 37px
+    }
+    .copyright {
+        padding-top: 9px;
+        padding-left: 0px;
+    }
+    .copyright__item {
+        letter-spacing: 0.5px;
+    }
+    .icons_footer {
+        padding-top: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
     
+    .slider-block {
+        height: 452px;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    .logo_humburger {
+        display: block;
+    }
     .header__navigation {
         display: none;
     }
@@ -766,25 +806,26 @@ h2 {
     #menu__toggle:checked~.menu__box {
         visibility: visible;
         left: 0;
-        padding-top: 219px;
+        padding-top: 211px;
     }
     .menu__btn {
         display: flex;
         align-items: center;
-        position: absolute;
+        position: fixed;
         top: 23px;
         left: 20px;
         width: 25px;
         height: 25px;
         cursor: pointer;
-        z-index: 2;
+        z-index: 150;
     }
     .menu__btn>span, .menu__btn>span::before, .menu__btn>span::after {
         display: block;
         position: absolute;
         width: 100%;
         height: 2px;
-        background-color: #FFFFFF;;
+        background-color: #FFFFFF;
+        ;
         transition-duration: .25s;
     }
     .menu__btn>span::before {
@@ -797,7 +838,7 @@ h2 {
     }
     .menu__box {
         display: block;
-        position: absolute;
+        position: fixed;
         visibility: hidden;
         top: 0;
         left: -100%;
@@ -809,7 +850,7 @@ h2 {
         background-color: #2D303A;
         box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
         transition-duration: .25s;
-        z-index: 1;
+        z-index: 130;
     }
     .menu__item {
         display: block;
@@ -821,15 +862,33 @@ h2 {
         text-decoration: none;
         transition-duration: .25s;
     }
-
     .navigation>li>a {
         font-size: 24px;
     }
-
-
     .header {
+        padding-bottom: 15px;
+        /* width: 768px; */
+    }
+    .logo {
+        margin: 0 auto;
+    }
+    .navigation {
+        margin-top: 7px;
+    }
+    
+    .portfolio__description {
+        /* width: 375px; */
+    }
+    .contact-section__input {
+        width: 212px;
+    }
+    .layout-4-column {
+        columns: 2
+    }
+    /* .header {
         padding-top: 24px;
         padding-bottom: 17px;
+        width: 375px;
     }
     .logo {
         margin: 0 auto;
@@ -844,129 +903,116 @@ h2 {
     }
     .arrow_left {
         left: 9px;
-    }
+    } */
     .Services-block {
         padding-top: 25px;
     }
     .wrapper_services {
-        width: 311px;
+        /* width: 311px; */
     }
-
-    .Services-block__description{
+    .Services-block__description {
         text-align: start;
-        
     }
     .service-text-block__description {
         line-height: 23px;
     }
-    
     .layout-3-column {
         columns: 1;
         padding-top: 7px;
         padding-right: 8px;
     }
-
     .service {
         padding-bottom: 9px;
+            height: 111px;
+    overflow: hidden;
     }
-
     .Services {
         padding-bottom: 0px;
         margin-top: -19px;
     }
-
+    .portfolio {
+        padding: 0 30px;
+    }
     .portfolio__title {
         margin-top: -2px;
     }
-
     .portfolio__title {
         padding-top: 41px;
     }
-
     .portfolio__title_about {
         padding-top: 33px;
     }
-
     .portfolio__description {
-        width: 316px;
+        width: 100%;
         margin-bottom: 15px;
         text-align: start;
     }
-
     .layout-4-column {
-        padding-top: 19px;
+        padding-top: 23px;
         column-gap: 13px;
     }
-
     .portfolio-item__image {
-        width: 151px;
+        width: calc((100vw - 76px)/2);
     }
-
     .portfolio-item {
-        width: 151px;
-        height: 122px;
+        padding: 6px 10px 6px 0px;
     }
-
     .portfolio {
-        height: 783px;
+        padding-bottom: 29px;
     }
-
     .portfolio__description_about {
         margin-top: 18px;
-        width: 309px;
+        width: 95%;
         text-align: start;
         margin-bottom: -21px;
     }
-
     .author>img {
         padding-top: 32px;
-        width: 314px;
+        width: 102%;
     }
-
     .author__title {
         margin-top: 14px;
     }
-
     .author__description {
-        width: 315px;
+        /* width: 315px; */
     }
     .about {
+        padding: 0 30px;
         padding-bottom: 39px;
     }
     .qoute__title {
         padding-top: 44px;
     }
-
     .contact-section {
         padding-top: 22px;
         display: block;
     }
-
     .contact-section__input {
-        width: 307px;
+        width: 97%;
         display: block;
     }
-
     .submit-button {
         margin-top: 2px;
-        padding: 17px 138px;
+        padding: 17px 10px;
+    }
+    .contact-information {
+        width: 100%;
     }
     .contact-information__title {
         margin-top: 31px;
     }
-
     .contact-information__description {
-        width: 317px;
     }
     .contact-block {
         margin-top: 11px;
         line-height: 24.5px;
     }
     .qoute {
+        padding: 0px 30px;
         padding-bottom: 35px;
     }
     .contact-form {
-        width: 320px;
+        width: 100%;
     }
     .copyright {
         display: none;
@@ -974,11 +1020,14 @@ h2 {
     .icons_footer {
         margin: 0 auto;
     }
-
-    .logo_humburger{
+    .logo_humburger {
         position: absolute;
         z-index: 1;
         top: 24px;
         left: 57px;
+    }
+
+    .submit-button {
+        width: 98%;
     }
 }
