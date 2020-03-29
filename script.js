@@ -10,8 +10,21 @@
     };
 })()
 
+// window.scrollBy({
+//     top: 666,
+//     behavior: 'smooth'
+// })
+
+
 phoneVertical = document.querySelector('.phone-vertical');
 phoneHorizontal = document.querySelector('.phone-horizontal');
+
+var verticalDispalyBlock = document.querySelector('.vertical-dispaly-block');
+var horizontalDispalyBlock = document.querySelector('.horizontal-dispaly-block');
+
+
+
+
 var menuToggle = document.getElementById('menu__toggle');
 
 var navigation = document.querySelector('.navigation');
@@ -35,11 +48,7 @@ for (let anchor of anchors) {
             behavior: 'smooth',
             block: 'start'
         })
-        menuToggle.checked = false;
-      
-       
-        
-        
+        menuToggle.checked = false; 
     })
 }
 
@@ -61,6 +70,7 @@ var widthSliderNumber = +widthSliderString.slice(0, widthSliderString.length - 2
 
 
 function draw(i) {
+
     if (i !== 'i') {
         offset = 1;
     }
@@ -95,6 +105,8 @@ function drawRight() {
 }
 
 function left() {
+    widthSliderString = getComputedStyle(document.querySelector('.slider-block')).width;
+    widthSliderNumber = +widthSliderString.slice(0, widthSliderString.length - 2);
 
     phoneVertical.style.opacity = 0;
     phoneHorizontal.style.opacity = 0;
@@ -123,6 +135,8 @@ function left() {
 function right() {
     phoneVertical.style.opacity = 0;
     phoneHorizontal.style.opacity = 0;
+    widthSliderString = getComputedStyle(document.querySelector('.slider-block')).width;
+    widthSliderNumber = +widthSliderString.slice(0, widthSliderString.length - 2);
 
     phoneVertical.removeEventListener('click', switchVertical);
     phoneHorizontal.removeEventListener('click', switchHorizontal);
@@ -180,17 +194,50 @@ if (window.matchMedia("screen and (min-width: 376px)").matches) {
 }
 
 function setLeftPosition (){
+    widthSliderString = getComputedStyle(document.querySelector('.slider-block')).width;
+    widthSliderNumber = +widthSliderString.slice(0, widthSliderString.length - 2);
     var slideVissableItems = document.querySelectorAll('.slider-block__img');
         for (var i = 0; i < slideVissableItems.length; i++) {
             slideVissableItems[i].style.left = (i) * widthSliderNumber - widthSliderNumber + 'px';
         }
 }
 
+function changeDisplayPosition(){
+    var sliderBlock = document.querySelector('.slider-block');
+    var widthSliderString = getComputedStyle(sliderBlock).width;
+    widthSliderNumber = +widthSliderString.slice(0, widthSliderString.length - 2);
+
+    var ratio = widthSliderNumber/1020;
+    phoneVertical.style.top = ratio*54 + 'px' ;
+    phoneVertical.style.left = ratio*113 + 'px' ;
+    phoneVertical.style.width = ratio*240 + 'px' ;
+    phoneVertical.style.height = ratio*483 + 'px' ;
+    
+    verticalDispalyBlock.style.margin = (ratio*65 + 'px 0px 0px ') + (ratio*13 + 'px');
+    verticalDispalyBlock.style.width = ratio*188 + 'px' ;
+    verticalDispalyBlock.style.height = ratio*333 + 'px' ;
+
+    phoneHorizontal.style.top = ratio*177 + 'px' ;
+    phoneHorizontal.style.right = ratio*112 + 'px' ;
+    phoneHorizontal.style.width = ratio*483 + 'px' ;
+    phoneHorizontal.style.height = ratio*240 + 'px' ;
+    
+    horizontalDispalyBlock.style.margin = (ratio*14 + 'px 0px 0px ') + (ratio*60 + 'px');
+    horizontalDispalyBlock.style.width = ratio*333 + 'px' ;
+    horizontalDispalyBlock.style.height = ratio*188 + 'px' ;
+
+    arrowLeft.style.top = ratio*281 + 'px' ;
+    arrowRight.style.top = ratio*281 + 'px' ;
+
+    sliderBlock.style.height = ratio*600 + 'px' ;
+}
+changeDisplayPosition();
+
 window.addEventListener(`resize`, event => {
-
-
-
     var slederImg = document.querySelectorAll('.slider-block__img');
+    changeDisplayPosition();
+    
+
     slederImg.forEach(element => {
             element.style.transition = 'none';
         });
@@ -221,7 +268,6 @@ window.addEventListener(`resize`, event => {
         widthSliderNumber=375;
         setLeftPosition();
     }
-  
 }, false);
 
 var newPortfolioImages = [];
@@ -327,4 +373,58 @@ submitButton.addEventListener('click', function (evt) {
 
 
 })
+var home = document.querySelectorAll('a[href="#home1"]');
+var home1 = document.getElementById('home1');
+var services1 = document.getElementById('services');
+var portfolio1 = document.getElementById('portfolio');
+var about1 = document.getElementById('about');
+var contact1 = document.getElementById('contact');
+var services = document.querySelectorAll('a[href="#services"]');
+
+var portfolio = document.querySelectorAll('a[href="#portfolio"]');
+var about = document.querySelectorAll('a[href="#about"]');
+var contact = document.querySelectorAll('a[href="#contact"]');
+window.addEventListener('scroll', function() {
+   //document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
+   
+
+   
+    console.log(pageYOffset);
+    for (var j = 0; j < navigationItems.length; j++) {
+            
+            navigationItems[j].setAttribute('style', '');
+        }
+    if (pageYOffset >= (home1.getBoundingClientRect().y) && pageYOffset<home1.getBoundingClientRect().y+300){
+        home.forEach(element => {
+                element.style.color = '#dc655f';
+                //console.log(home1.getBoundingClientRect())
+        });
+    }
+
+    if (pageYOffset >= (services1.getBoundingClientRect().y) && pageYOffset<services1.getBoundingClientRect().y+600){
+        services.forEach(element => {
+            element.style.color = '#dc655f';
+            //console.log(element.getBoundingClientRect())
+    });
+    }
+
+    if (pageYOffset >= (portfolio1.getBoundingClientRect().y) && pageYOffset<portfolio1.getBoundingClientRect().y+900){
+        portfolio.forEach(element => {
+            element.style.color = '#dc655f';
+    });
+    }
+
+    if (pageYOffset >= (about1.getBoundingClientRect().y) && pageYOffset<about1.getBoundingClientRect().y+600){
+        about.forEach(element => {
+            element.style.color = '#dc655f';
+    });
+    }
+
+    if (pageYOffset >= (contact1.getBoundingClientRect().y)){
+        contact.forEach(element => {
+            element.style.color = '#dc655f';
+    });
+    }
+    
+  });
 

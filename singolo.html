@@ -9,49 +9,38 @@
     <link rel="stylesheet" href="singolo.css">
 </head>
 
-<body>
-    <header class="header">
-        <div class="wrapper">
-            <div class="header-block">
+<body class="page-main">
 
-                <h1 class="logo">SINGOLO<span>*</span> </h1>
-                <nav class="header__navigation">
-                    <ul class="navigation menu__box">
-                        <li><a href="#home" class="navigation__link">HOME</a></li>
-                        <li><span>·</span></li>
-                        <li><a href="#services" class="navigation__link">SERVICES</a></li>
-                        <li><span>·</span></li>
-                        <li><a href="#portfolio" class="navigation__link">PORTFOLIO</a></li>
-                        <li><span>·</span></li>
-                        <li><a href="#about" class="navigation__link">ABOUT</a></li>
-                        <li><span>·</span></li>
-                        <li><a href="#contact" class="navigation__link">CONTACT</a></li>
-                    </ul>
-                </nav>
+    <header id="home1" class="header">
+        <div class="wrapper wrapper1 wrapper-header">
 
 
+            <h1 class="logo">SINGOLO<span>*</span> </h1>
+            <nav class="header__navigation">
+                <ul class="navigation menu__box">
+                    <li><a href="#home1" class="navigation__link">HOME</a></li>
+                    <li><span>·</span></li>
+                    <li><a href="#services" class="navigation__link">SERVICES</a></li>
+                    <li><span>·</span></li>
+                    <li><a href="#portfolio" class="navigation__link">PORTFOLIO</a></li>
+                    <li><span>·</span></li>
+                    <li><a href="#about" class="navigation__link">ABOUT</a></li>
+                    <li><span>·</span></li>
+                    <li><a href="#contact" class="navigation__link">CONTACT</a></li>
+                </ul>
+            </nav>
 
 
 
-            </div>
+
+
+
         </div>
     </header>
     <div id="home" class="slider">
         <div class="slider-block">
             <img src="./assets/images/slide1.png" alt="slide1" class="slider-block__img">
             <img src="./assets/images/slide2.png" alt="slide2" class="slider-block__img">
-
-            <!-- <div class="Slider-item" >  
-                 <div class="aroww" ></div> 
-                
-                <div class="phone-vertical"><img src="assets/images/iPhone Vertical.png" alt="phone-vertical"></div>
-                <div class="phone-horizontal"><img src="assets/images/iPhone Horizontal.png" alt="phone-horizontal" ></div>
-                <div class="arrow arrow_rigth"></div> -->
-            <!-- <div class="Slider-item-2">
-                <div class="slide-block">
-                    <img src="./assets/images/slide2.png" alt="slide1">
-                </div>
-            </div> -->
         </div>
 
         <div class="arrow arrow_active arrow_left"></div>
@@ -68,12 +57,12 @@
         <input id="menu__toggle" type="checkbox" />
         <label class="menu__btn" for="menu__toggle">
             <span></span>
-            
+
         </label>
-        
+
         <ul class="navigation menu__box">
             <h1 class="logo logo_humburger">SINGOLO<span>*</span> </h1>
-            <li><a href="#home" class="navigation__link menu__item">HOME</a></li>
+            <li><a href="#home1" class="navigation__link menu__item">HOME</a></li>
             <li><a href="#services" class="navigation__link menu__item">SERVICES</a></li>
             <li><a href="#portfolio" class="navigation__link menu__item">PORTFOLIO</a></li>
             <li><a href="#about" class="navigation__link menu__item">ABOUT</a></li>
@@ -86,7 +75,7 @@
     <section id="services" class="Services">
         <div class="wrapper wrapper_services">
 
-            
+
             <div class="Services-block">
                 <h2 class="Services-block__title">Our Services</h2>
                 <p class="Services-block__description" align="justify">Fusce dapibus, tellus ac cursus commodo, tortor
@@ -212,6 +201,11 @@
                         <span class="icons-item"><img src="assets/images/icon-twitter.png" alt=""></span>
                         <span class="icons-item"><img src="assets/images/icon-linkedin.png" alt=""></span>
                     </div>
+
+                    
+                </div>
+               
+                <div class="author">
                     <img src="assets/images/photo2.jpg" alt="">
                     <h3 class="author__title">Desmond Miles</h3>
                     <p class="author__description" align="justify">Curabitur vestibulum eget mauris quis laoreet.
@@ -222,9 +216,12 @@
                         <span class="icons-item"><img src="assets/images/icon-twitter.png" alt=""></span>
                         <span class="icons-item"><img src="assets/images/icon-linkedin.png" alt=""></span>
                     </div>
+                </div>
+                <div class="author">
                     <img src="assets/images/photo3.jpg" alt="">
                     <h3 class="author__title">Scolara Visari</h3>
-                    <p class="author__description" align="justify">Nulla sed nunc et tortor luctus faucibus. Morbi at
+                    <p class="author__description" align="justify">Nulla sed nunc et tortor luctus faucibus. Morbi
+                        at
                         aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     <div class="icons">
                         <span class="icons-item"><img src="assets/images/icon-facebook.png" alt=""></span>
@@ -288,11 +285,11 @@
         for (var i = 0; i <= portfolioItems.length; i++) {
             if (i > 7 && portfolioItems.length > 8) {
                 portfolioItems[i].setAttribute('hidden', true);
-                
+
             }
         }
     </script>
-    <script src="./script.js"></script>
+    <script src="./script.js"></script> 
 </body>
 
 </html>
