@@ -375,12 +375,7 @@ submitButton.addEventListener('click', function (evt) {
 })
 var home = document.querySelectorAll('a[href="#home1"]');
 var home1 = document.getElementById('home1');
-var services1 = document.getElementById('services');
-var portfolio1 = document.getElementById('portfolio');
-var about1 = document.getElementById('about');
-var contact1 = document.getElementById('contact');
 var services = document.querySelectorAll('a[href="#services"]');
-
 var portfolio = document.querySelectorAll('a[href="#portfolio"]');
 var about = document.querySelectorAll('a[href="#about"]');
 var contact = document.querySelectorAll('a[href="#contact"]');
@@ -394,33 +389,33 @@ window.addEventListener('scroll', function() {
             
             navigationItems[j].setAttribute('style', '');
         }
-    if (pageYOffset >= (home1.getBoundingClientRect().y) && pageYOffset<home1.getBoundingClientRect().y+300){
+    if (pageYOffset >= 0 && pageYOffset<300){
         home.forEach(element => {
                 element.style.color = '#dc655f';
-                //console.log(home1.getBoundingClientRect())
+                console.log(home1.getBoundingClientRect())
         });
     }
 
-    if (pageYOffset >= (services1.getBoundingClientRect().y) && pageYOffset<services1.getBoundingClientRect().y+600){
+    if (pageYOffset >= 300 && pageYOffset<900){
         services.forEach(element => {
             element.style.color = '#dc655f';
-            //console.log(element.getBoundingClientRect())
+            console.log(element.getBoundingClientRect())
     });
     }
 
-    if (pageYOffset >= (portfolio1.getBoundingClientRect().y) && pageYOffset<portfolio1.getBoundingClientRect().y+900){
+    if (pageYOffset >= 900 && pageYOffset<1800){
         portfolio.forEach(element => {
             element.style.color = '#dc655f';
     });
     }
 
-    if (pageYOffset >= (about1.getBoundingClientRect().y) && pageYOffset<about1.getBoundingClientRect().y+600){
+    if (pageYOffset >= 1800 && pageYOffset<2500){
         about.forEach(element => {
             element.style.color = '#dc655f';
     });
     }
 
-    if (pageYOffset >= (contact1.getBoundingClientRect().y)){
+    if (pageYOffset >= 2500){
         contact.forEach(element => {
             element.style.color = '#dc655f';
     });
