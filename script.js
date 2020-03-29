@@ -378,7 +378,7 @@ var home1 = document.getElementById('home1');
 var services = document.querySelectorAll('a[href="#services"]');
 var portfolio = document.querySelectorAll('a[href="#portfolio"]');
 var about = document.querySelectorAll('a[href="#about"]');
-var contact = document.querySelectorAll('a[href="#contact"]');
+var contact1 = document.querySelectorAll('a[href="#contact"]');
 window.addEventListener('scroll', function() {
    //document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
    
@@ -416,7 +416,7 @@ window.addEventListener('scroll', function() {
     }
 
     if (pageYOffset >= 2500){
-        contact.forEach(element => {
+        contact1.forEach(element => {
             element.style.color = '#dc655f';
     });
     }
