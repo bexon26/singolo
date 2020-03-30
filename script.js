@@ -119,7 +119,7 @@ function left() {
     var offset2 = -1;
     for (var i = 0; i < slideVissableItems.length; i++) {
         slideVissableItems[i].style.left = offset2 * widthSliderNumber - widthSliderNumber + 'px';
-        if (slideVissableItems[0].src === 'file:///C:/Users/%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9/Documents/GitHub/singolo/assets/images/slide1.png') {
+        if (slideVissableItems[0].src.includes('slide1.png')) {
             phoneVertical.addEventListener('click', switchVertical);
             phoneHorizontal.addEventListener('click', switchHorizontal);
         }
@@ -147,7 +147,7 @@ function right() {
 
     for (var i = slideVissableItems.length - 1; i >= 0; i--) {
         slideVissableItems[i].style.left = offset2 * widthSliderNumber + widthSliderNumber + 'px';
-        if (slideVissableItems[0].src === 'file:///C:/Users/%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9/Documents/GitHub/singolo/assets/images/slide1.png') {
+        if (slideVissableItems[0].src.includes('slide1.png')) {
             phoneVertical.addEventListener('click', switchVertical);
             phoneHorizontal.addEventListener('click', switchHorizontal);
         }
