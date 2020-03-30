@@ -119,7 +119,7 @@ function left() {
     var offset2 = -1;
     for (var i = 0; i < slideVissableItems.length; i++) {
         slideVissableItems[i].style.left = offset2 * widthSliderNumber - widthSliderNumber + 'px';
-        if (slideVissableItems[0].src.includes('slide1')) {
+        if (slideVissableItems[0].getAttribute('src').includes('slide1')) {
             phoneVertical.addEventListener('click', switchVertical);
             phoneHorizontal.addEventListener('click', switchHorizontal);
         }
@@ -147,7 +147,7 @@ function right() {
 
     for (var i = slideVissableItems.length - 1; i >= 0; i--) {
         slideVissableItems[i].style.left = offset2 * widthSliderNumber + widthSliderNumber + 'px';
-        if (slideVissableItems[0].src.includes('slide1')) {
+        if (slideVissableItems[0].getAttribute('src').includes('slide1')) {
             phoneVertical.addEventListener('click', switchVertical);
             phoneHorizontal.addEventListener('click', switchHorizontal);
         }
